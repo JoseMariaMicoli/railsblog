@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RailsBlog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+<%= render 'layouts/header' %>
 <body>
-
+<%= render 'layouts/navigation' %>
+<%= render 'layouts/pageheader' %>
+<div class="container">
 <%= yield %>
-
+</div>
+<%= render 'layouts/footer' %>
 </body>
 </html>

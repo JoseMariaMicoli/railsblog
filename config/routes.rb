@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   end
   get '/about', to: 'pages#about'
 
+  resources "contacts", only: [:new, :create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

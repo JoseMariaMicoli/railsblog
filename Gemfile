@@ -48,3 +48,7 @@ gem 'mail_form', '~> 1.5.0.rc'
 gem 'simple_form', '~> 3.0.0.rc'
 #Rails_Admin
 gem 'rails_admin'
+#CK_Editor for Rails
+gem 'ckeditor'
+#Paperclip
+gem 'paperclip'

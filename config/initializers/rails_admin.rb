@@ -31,4 +31,11 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Post do
+    edit do
+      field :body, :ck_editor
+    end
+  end
+  
 end

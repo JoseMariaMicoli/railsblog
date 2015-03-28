@@ -8,7 +8,7 @@
 </p>
 
 <p>
-  <strong><%= @post.body %></strong>
+  <strong><%= raw(@post.body) %></strong>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

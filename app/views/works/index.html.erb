@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<% @works.each do |work| %>
+    <!-- Main Content -->
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="work-preview">
+                        <h2 class="work-title">
+                            <h1 align="center"><%= link_to  "#{work.title}", work %></h1>
+                        </h2>
+                        <div align="center">
+                            <%= image_tag work.image.url(:medium) %>
+                        </div>
+                        <a>
+                        <h3 class="work-subtitle">
+                            <%= raw(work.description) %>
+                        </h3>
+                      </a>
+                    <p class="post-meta">Posted by <a href="#">Jose Maria Micoli</a> on <%= work.created_at %></p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+    <hr>
+<% end %>

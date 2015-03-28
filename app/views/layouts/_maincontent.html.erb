@@ -25,3 +25,8 @@
 <br>
 
 <%= link_to 'New Post', new_post_path, class: 'btn btn-success' %>
+
+
+<%= image_tag @post.image.url %>
+<%= image_tag @post.image.url(:medium) %>
+<%= image_tag @post.image.url(:thumb) %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :works
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'posts#index'

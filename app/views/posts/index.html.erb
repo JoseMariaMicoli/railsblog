@@ -8,6 +8,9 @@
                         <h2 class="post-title">
                             <%= link_to  "#{post.title}", post %>
                         </h2>
+                        <div align="center">
+                            <%= image_tag post.image.url(:thumb) %>
+                        </div>
                         <a>
                         <h3 class="post-subtitle">
                             <%= post.body %>

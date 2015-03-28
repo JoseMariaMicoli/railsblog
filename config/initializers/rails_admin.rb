@@ -41,6 +41,15 @@ RailsAdmin.config do |config|
     edit do
       field :title
       field :body, :ck_editor
+      field :image
+    end
+  end
+
+  config.model Work do
+    edit do
+      field :title
+      field :description, :ck_editor
+      field :image
     end
   end
   

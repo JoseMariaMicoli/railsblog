@@ -52,3 +52,7 @@ gem 'rails_admin'
 gem 'ckeditor'
 #Paperclip
 gem 'paperclip'
+#Boostrap-sass
+gem 'bootstrap-sass', '~> 3.3.4'
+#Devise for authentication and user
+gem 'devise'

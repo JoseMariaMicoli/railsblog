@@ -34,6 +34,7 @@ RailsAdmin.config do |config|
 
   config.model Post do
     edit do
+      field :title
       field :body, :ck_editor
     end
   end

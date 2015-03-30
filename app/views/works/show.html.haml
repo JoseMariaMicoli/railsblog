@@ -16,4 +16,7 @@
                 = @work.created_at
             .col-md-6
               .btn-group.pull-right
+                = link_to like_work_path(@work), method: :put, class: "btn btn-success" do
+                  %span.glyphicon.glyphicon-heart
+                    = @work.get_upvotes.size
                 = link_to "Voltar", works_path, class: "btn btn-primary"

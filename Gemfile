@@ -64,3 +64,5 @@ gem 'masonry-rails', '~> 0.2.4'
 gem 'imagesLoaded_rails', '~> 3.1.8'
 #jQueryTurboLinks
 gem 'jquery-turbolinks'
+# acts_as_votable
+gem 'acts_as_votable', '~> 0.10.0'

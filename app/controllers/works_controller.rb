@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-  before_action :set_work, only: [:show, :edit, :update, :destroy]
+  before_action :set_work, only: [:show, :edit, :update, :destroy, :upvote]
 
   # GET /works
   # GET /works.json
@@ -59,6 +59,11 @@ class WorksController < ApplicationController
       format.html { redirect_to works_url, notice: 'Work was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def upvote
+    @work.upvote_by current_user
+    redirect_to :back
   end
 
   private

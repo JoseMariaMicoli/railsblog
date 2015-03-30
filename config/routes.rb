@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :works
+  resources :works do
+    member do
+      put "like", to: "works#upvote"
+    end
+  end
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

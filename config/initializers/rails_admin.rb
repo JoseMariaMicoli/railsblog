@@ -42,6 +42,11 @@ RailsAdmin.config do |config|
       field :title
       field :body, :ck_editor
       field :image
+      field :user_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
     end
   end
 
@@ -50,7 +55,14 @@ RailsAdmin.config do |config|
       field :title
       field :description, :ck_editor
       field :image
+      field :user_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
     end
   end
+
+  config.main_app_name = ["Micoli's Blog", "Admin"]
   
 end

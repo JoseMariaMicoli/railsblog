@@ -13,10 +13,10 @@
                         </div>
                         <a>
                         <h3 class="post-subtitle">
-                            <%= raw(post.body) %>
+                            <%= raw(post.body.split[0..100].join(" ")) %>
                         </h3>
                       </a>
-                    <p class="post-meta">Posted by <a href="#">Jose Maria Micoli</a> on <%= post.created_at %></p>
+                    <p class="post-meta">Posted by <a href="#"><%= post.user.email %></a> on <%= post.created_at %></p>
                 </div>
                 <hr>
             </div>

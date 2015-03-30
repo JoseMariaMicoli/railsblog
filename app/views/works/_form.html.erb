@@ -1,16 +1,16 @@
 <%= simple_form_for(@work) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :image_file_name %>
-    <%= f.input :image_content_type %>
-    <%= f.input :image_file_size %>
-    <%= f.input :image_updated_at %>
+  <div class="form-group">
+    <%= f.input :title, input_html: { class: 'form-control'} %>
+    <%= f.input :description, input_html: { class: 'form-control'} %>
+    <%= f.input :image_file_name, input_html: { class: 'form-control'} %>
+    <%= f.input :image_content_type, input_html: { class: 'form-control'} %>
+    <%= f.input :image_file_size, input_html: { class: 'form-control'} %>
+    <%= f.input :image_updated_at, input_html: { class: 'form-control'} %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, input_html: { class: 'btn btn-success'} %>
   </div>
 <% end %>

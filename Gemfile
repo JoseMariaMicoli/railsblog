@@ -56,3 +56,5 @@ gem 'paperclip'
 gem 'bootstrap-sass', '~> 3.3.4'
 #Devise for authentication and user
 gem 'devise'
+#Haml
+gem 'haml', '~> 4.0.6'

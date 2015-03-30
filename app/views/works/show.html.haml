@@ -1,0 +1,19 @@
+#work_show.row
+  .col-md-8-col-md-offset-2
+    .panel.panel-default
+      .panel-heading.work_image
+        = image_tag @work.image.url
+      .panel-body
+        %h1= @work.title
+        %p.description= raw(@work.description)
+        .panel-footer
+          .row
+            .col-md-6
+              %p.user
+                Submitted by
+                = @work.user.email
+                on
+                = @work.created_at
+            .col-md-6
+              .btn-group.pull-right
+                = link_to "Voltar", works_path, class: "btn btn-primary"

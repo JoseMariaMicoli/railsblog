@@ -58,3 +58,5 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'devise'
 #Haml
 gem 'haml', '~> 4.0.6'
+#Masonry-rails
+gem 'masonry-rails', '~> 0.2.4'

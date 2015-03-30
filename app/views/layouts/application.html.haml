@@ -1,0 +1,17 @@
+!!! 5
+%html
+	%head
+		= render 'layouts/header' 
+	%body
+
+		= render 'layouts/navigation'
+
+
+		= render 'layouts/pageheader'
+
+		.container
+			- flash.each do |name, msg|
+				= content_tag :div, msg, class: "alert alert-info"
+			= yield
+
+		= render 'layouts/footer'

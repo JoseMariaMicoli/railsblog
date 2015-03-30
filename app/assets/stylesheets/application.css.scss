@@ -113,3 +113,38 @@ min-height: 250px;
 .foot {
 	background-color: #660033;
 }
+
+.post-box {
+	padding: 15px;
+	background-color: rgba(5, 117, 161, 0.1);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.panel-default {
+	max-width: 600px;
+}
+
+.panel-heading {
+	font-size: 22;
+}
+
+.panel-footer {
+	font-size: 12px;
+}
+
+.panel-body {
+	font-size: 18px;
+}
+
+.post-list {
+	align: center;
+}
+
+.footer-below {
+	padding: 25px 0;
+    background-color: #233140;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}

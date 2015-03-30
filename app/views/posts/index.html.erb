@@ -1,33 +1,26 @@
-<p id="notice"><%= notice %></p>
-
+<div class="post-list">
 <% @posts.each do |post| %>
     <!-- Main Content -->
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                        <h2 class="post-title">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>
                             <%= link_to  "#{post.title}", post %>
-                        </h2>
-                        <div align="center">
-                            <%= image_tag post.image.url(:thumb) %>
-                        </div>
-                        <a>
-                        <h3 class="post-subtitle">
-                            <%= raw(post.body.split[0..100].join(" ")) %>
+                        </h4>
+                    </div>
+                    <div class="panel-body" align="center">
+                         <h3>
+                            <%= raw(post.body.split[0..100].join(" ")) %>...
                         </h3>
-                      </a>
-                    <p class="post-meta">Posted by <a href="#"><%= post.user.email %></a> on <%= post.created_at %></p>
+                    </div>
+                    <div class="panel-footer">
+                    Posted by <strong><%= post.user.email %></strong> on <%= post.created_at %>
+                    </div>
+                </div>
                 </div>
                 <hr>
             </div>
         </div>
-
-    <hr>
 <% end %>
-
-<!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
+</div>

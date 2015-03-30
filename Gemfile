@@ -60,3 +60,7 @@ gem 'devise'
 gem 'haml', '~> 4.0.6'
 #Masonry-rails
 gem 'masonry-rails', '~> 0.2.4'
+# imagesLoaded
+gem 'imagesLoaded_rails', '~> 3.1.8'
+#jQueryTurboLinks
+gem 'jquery-turbolinks'

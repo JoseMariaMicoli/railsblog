@@ -1,26 +1,23 @@
-<div class="post-list">
-<% @posts.each do |post| %>
-    <!-- Main Content -->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4>
-                            <%= link_to  "#{post.title}", post %>
-                        </h4>
-                    </div>
-                    <div class="panel-body" align="center">
-                         <h3>
-                            <%= raw(post.body.split[0..100].join(" ")) %>...
-                        </h3>
-                    </div>
-                    <div class="panel-footer">
+<!-- Main Content -->
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <% @posts.each do |post| %>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        <%= link_to  "#{post.title}", post %>
+                    </h4>
+                </div>
+                <div class="panel-body" align="center">
+                    <h3>
+                        <%= raw(post.body.split[0..100].join(" ")) %>...
+                    </h3>
+                </div>
+                <div class="panel-footer">
                     Posted by <strong><%= post.user.email %></strong> on <%= post.created_at %>
-                    </div>
                 </div>
-                </div>
-                <hr>
             </div>
-        </div>
-<% end %>
+            <hr>
+        <% end %>
+    </div>
 </div>

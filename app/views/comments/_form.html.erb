@@ -1,10 +1,12 @@
-<%= form_for([@post, @post.comments.build]) do |f| %>
-  <%= f.label :name %><br>
-  <%= f.text_field :name %><br>
-  <br>
-  <%= f.label :body %><br>
-  <%= f.text_area :body %><br>
-  <br>
-  <%= f.submit %>
+<%= simple_form_for([@post, @post.comments.build]) do |f| %>
+	<%= f.error_notification %>
+
+  	<div class="form-group">
+    	<%= f.input :body, input_html: { class: 'form-control'}, label: 'Comentario' %>
+  	</div>
+
+  	<div class="form-actions">
+    	<%= f.button :submit, input_html: { class: 'btn btn-primary'} %>
+  	</div>
 <% end %>
  

@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+	acts_as_votable
 	default_scope { order('created_at DESC') }
 	has_many :comments, dependent: :destroy
 	belongs_to :user

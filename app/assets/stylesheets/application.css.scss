@@ -188,3 +188,24 @@ textarea {
     font-size: 14px;
     text-align: center;
 }
+
+#panel-custom {
+	max-width: 200px;
+
+	.panel-body {
+		font-size: 16px;
+	}
+
+	.panel-footer {
+		font-family: Comic Sans, Comic Sans MS, cursive;
+		font-size: 14px;
+		color: #000;
+	
+		img {
+			border-radius: 50%;
+    		width: 50px;
+    		height: 50px;
+		}
+	}
+}
+

@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'posts#index'
   resources :posts do
+    member do
+      put "like", to: "posts#upvote"
+    end
     resources :comments
   end
   get '/about', to: 'pages#about'

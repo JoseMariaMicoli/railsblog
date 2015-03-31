@@ -11,8 +11,13 @@
 				<p>
   					<strong><%= raw(@post.body) %></strong>
 				</p>
-
-				<%= link_to 'Voltar', posts_path, class: "btn btn-warning" %>
+				<div class="btn-group pull-right">
+                	<%= link_to like_post_path(@post), method: :put, class: "btn btn-success" do %>
+                  		<span class="glyphicon glyphicon-heart"/>
+                    		<%= @post.get_upvotes.size %>
+                	<% end %>
+                	<%= link_to 'Voltar', posts_path, class: "btn btn-warning" %>
+                </div>
 			</div>
 			<div class="panel-footer" style="background-color: #ffc700">
 				<strong>Posted by <%= image_tag @post.user.gravatar_url %> <%= @post.user.email %> on <%= @post.created_at %></strong>
@@ -20,7 +25,7 @@
   		</div>
   		<div class="panel panel-default">
   			<div class="panel-heading" style="background-color: #3399ff">
-				<h2><%= @post.comments.count %> Comments</h2>
+				<h2><%= @post.comments.count %> comentarios</h2>
 			</div>
   			<div class="panel-body" style="background-color: #ffeead">
   				<%= render @post.comments %>

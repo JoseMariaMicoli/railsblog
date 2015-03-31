@@ -9,25 +9,24 @@
 			<div class="panel-body" style="background-color: #ffeead;">
 
 				<p>
-					<%= image_tag @post.image.url(:medium) %>
-				</p>
-
-				<p>
   					<strong><%= raw(@post.body) %></strong>
 				</p>
 
-				<%= link_to 'Edit', edit_post_path(@post) %> |
-				<%= link_to 'Back', posts_path %>
+				<%= link_to 'Voltar', posts_path, class: "btn btn-warning" %>
 			</div>
 			<div class="panel-footer" style="background-color: #ffc700">
-				<div id="comments">
-    				<h2><%= @post.comments.count %> Comments</h2>
-    				<%= render @post.comments %>
- 
-    				<h3>Add a comment:</h3>
-    				<%= render "comments/form" %>
-  				</div>
-  			</div>
+				<strong>Posted by <%= image_tag @post.user.gravatar_url %> <%= @post.user.email %> on <%= @post.created_at %></strong>
+			</div>
   		</div>
-	</div>
+  		<div class="panel panel-default">
+  			<div class="panel-heading" style="background-color: #3399ff">
+				<h2><%= @post.comments.count %> Comments</h2>
+			</div>
+  			<div class="panel-body" style="background-color: #ffeead">
+  				<%= render @post.comments %>
+				<h3>Add a comment:</h3>
+				<%= render "comments/form" %>
+			</div>
+  		</div>
+  	</div>
 </div>

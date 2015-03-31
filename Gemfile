@@ -66,3 +66,5 @@ gem 'imagesLoaded_rails', '~> 3.1.8'
 gem 'jquery-turbolinks'
 # acts_as_votable
 gem 'acts_as_votable', '~> 0.10.0'
+# gravtastic
+gem 'gravtastic', '~> 3.2.6'

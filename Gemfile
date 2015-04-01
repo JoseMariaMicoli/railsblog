@@ -68,3 +68,5 @@ gem 'jquery-turbolinks'
 gem 'acts_as_votable', '~> 0.10.0'
 # gravtastic
 gem 'gravtastic', '~> 3.2.6'
+# CanCan
+gem 'cancan', '~> 1.6.10'

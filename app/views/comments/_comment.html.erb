@@ -1,6 +1,6 @@
 <div class="panel panel-custom">
   <div class="panel-body">
-    <%= comment.body %>
+    <span class="glyphicon glyphicon-comment"> <%= comment.body %>
   </div>
   <div class="panel-footer">
     Por <%= image_tag comment.user.gravatar_url %> <%= comment.user.email %> <%= time_ago_in_words(comment.created_at) %> atras.</p>

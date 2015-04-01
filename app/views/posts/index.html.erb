@@ -14,7 +14,7 @@
                     </h3>
                 </div>
                 <div class="panel-footer" style="background-color: #ffc700;">
-                    <strong>Posted by <%= image_tag post.user.gravatar_url %> <%= post.user.email %> on <%= post.created_at %></strong>
+                    <strong>Por <%= image_tag post.user.gravatar_url %> <%= post.user.email %> a <%= time_ago_in_words(post.created_at) %> atras.</strong>
                 </div>
             </div>
             <hr>

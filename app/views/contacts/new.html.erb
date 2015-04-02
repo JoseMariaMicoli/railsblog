@@ -1,15 +1,21 @@
 <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-  		<h1>Contato</h1>
-      <div class="form-group">
-  		  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-  		  <%= f.input :name, placeholder: 'seu nome', :required => true, input_html: { class: 'form-control' } %>
-  		  <%= f.input :email, placeholder: 'email@exemplo.com', :required => true, input_html: { class: 'form-control' } %>
-  		  <%= f.input :message, placeholder: 'Escreva aqui sua mensagem...', :as => :text, :required => false, :input_html => {:rows => 10}, input_html: { class: 'form-control' } %>
-  		  <p class="form-actions">
-    	   <%= f.button :submit, 'Enviar', :class=> "btn btn-primary" %>
-  		  </p>
-  		  <% end %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+  		    <h1>Contato</h1>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+  		      <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+  		      <%= f.input :name, placeholder: 'seu nome', :required => true, input_html: { class: 'form-control' } %>
+  		      <%= f.input :email, placeholder: 'email@exemplo.com', :required => true, input_html: { class: 'form-control' } %>
+  		      <%= f.input :message, placeholder: 'Escreva aqui sua mensagem...', :as => :text, :required => false, :input_html => {:rows => 10}, input_html: { class: 'form-control' } %>
+  		      <p class="form-actions">
+    	       <%= f.button :submit, 'Enviar', :class=> "btn btn-primary" %>
+  		      </p>
+  		      <% end %>
+          </div>
+        </div>
       </div>
-	</div>
+	  </div>
 </div>

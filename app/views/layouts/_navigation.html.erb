@@ -29,11 +29,11 @@
                     </li>
           
                     <% if user_signed_in? %>
-                        <li><%= link_to "Account", edit_user_registration_path, class: "btn btn-sm btn-primary" %></li>
-                        <li><%= link_to "Sign Out", destroy_user_session_path, class: "btn btn-sm btn-danger", method: :delete %>
+                        <li><%= link_to "Perfil", edit_user_registration_path, class: "btn btn-sm btn-primary" %></li>
+                        <li><%= link_to "Sair", destroy_user_session_path, class: "btn btn-sm btn-danger", method: :delete %>
                     <% else %>
-                        <li><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-sm btn-success" %></li>
-                        <li><%= link_to "Sign In", new_user_session_path, class: "btn btn-sm btn-primary" %></li>
+                        <li><%= link_to "Registrar", new_user_registration_path, class: "btn btn-sm btn-success" %></li>
+                        <li><%= link_to "Entrar", new_user_session_path, class: "btn btn-sm btn-primary" %></li>
                  
                     <% end %>
                 </ul>

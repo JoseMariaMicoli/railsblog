@@ -30,10 +30,18 @@ class Ability
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
 
     user ||= User.new # guest user (not logged in)
-    if user.admin?
+    if user.nil?
+        can :read, :all
+        cannot [:update, :destroy, :create, :upvote], [Post, Work]
+        cannot [:update, :destroy, :create], Comment
+    elsif user.admin?
         can :manage, :all
     else
         can :read, :all
+        can :create, Comment
+        can :upvote, [Post, Work]
+        cannot [:update, :destroy, :create], [Post, Work]
+        cannot [:update, :destroy], Comment
     end
   end
 end

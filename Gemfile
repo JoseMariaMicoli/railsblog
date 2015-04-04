@@ -70,3 +70,5 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'gravtastic', '~> 3.2.6'
 # CanCan
 gem 'cancan', '~> 1.6.10'
+#OmniAuth for Facebook login
+gem 'omniauth-facebook'

@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   include Gravtastic
 	gravtastic
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :posts
   has_many :works

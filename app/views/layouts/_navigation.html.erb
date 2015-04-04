@@ -27,14 +27,14 @@
                     <li>
                         <%= link_to "Contato", new_contact_path, class: "glyphicon glyphicon-envelope" %>
                     </li>
-          
+                    
                     <% if user_signed_in? %>
-                        <li><%= link_to "Perfil", edit_user_registration_path, class: "btn btn-sm btn-primary" %></li>
-                        <li><%= link_to "Sair", destroy_user_session_path, class: "btn btn-sm btn-danger", method: :delete %>
+                        <li><%= link_to "Perfil", edit_user_registration_path, class: "btn btn-primary btn-sm" %></li>
+                        <li><%= link_to "Sair", destroy_user_session_path, class: "btn btn-danger btn-sm", method: :delete %>
                     <% else %>
-                        <li><%= link_to "Registrar", new_user_registration_path, class: "btn btn-sm btn-success" %></li>
-                        <li><%= link_to "Entrar", new_user_session_path, class: "btn btn-sm btn-primary" %></li>
-                        <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %></li>
+                        <li><%= link_to "Registrar", new_user_registration_path, class: "btn btn-success btn-sm " %></li>
+                        <li><%= link_to "Entrar", new_user_session_path, class: "btn btn-primary btn-sm " %></li>
+                        <li><%= link_to "Entrar com Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %></li>
                  
                     <% end %>
                 </ul>
